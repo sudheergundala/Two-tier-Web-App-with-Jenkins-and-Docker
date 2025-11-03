@@ -1,2 +1,8 @@
-# Two-tier-Web-App-with-Jenkins-and-Docker
-In this project, I built an automated CI/CD pipeline which deploys the flask application(flask+MySQL) on AWS EC2 using Jenkins, Docker and DockerCompose.
+# Project: Automating the deployment of two-tier Containerized flask application on AWS.
+
+**Date:** 11/03/2025
+
+------
+## Table of contents
+1. [Project Overview]
+ 
