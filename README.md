@@ -13,4 +13,12 @@
 7. [Step 5: Jenkins pipeline Creation and Execution](#jenkins-pipeline-creation-and-execution)
 8. [Conclusion](#conclusion)
 
+
+## Project Overview
+      In this project, we deploy the two-tier web application(Flask+MySql) on to AWS EC2 instance. The application is containerized using Docker and manged by the Docker Compose. To automate the build and deployment process we use Jenkins pipelines, when ever the new code is pushed to the github repo the webhook will triger the jenkins process.
+      # Tools Used:-
+          Version Control System - GitHub
+          CI/CD - Jenkins
+          Container - Docker, Docker Compose
+          Cloud - AWS
  
