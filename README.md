@@ -14,8 +14,12 @@
 8. [Conclusion](#conclusion)
 
 
-## Project Overview
-      In this project, we deploy the two-tier web application(Flask+MySql) on to AWS EC2 instance. The application is containerized using Docker and manged by the Docker Compose. To automate the build and deployment process we use Jenkins pipelines, when ever the new code is pushed to the github repo the webhook will triger the jenkins process.
+## 1. Project Overview
+This project demonstrates the automation of deployment for a two-tier web application (Flask + MySQL) on an AWS EC2 instance.
+The application is containerized using Docker and managed with Docker Compose.
+A Jenkins CI/CD pipeline automates the build, test, and deployment process.
+Whenever new code is pushed to the GitHub repository, a webhook triggers Jenkins, which rebuilds and redeploys the updated containers automatically.
+
       # Tools Used:-
           Version Control System - GitHub
           CI/CD - Jenkins
