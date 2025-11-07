@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Messages</h1>
+    <ul>
+      {% for row in messages %}
+        <li>{{ row[0] }}</li>  <!-- row is a tuple like ('hello',) -->
+      {% endfor %}
+    </ul>
+    <form action="/submit" method="post">
+      <input name="new_message" placeholder="Type a message" required />
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>
