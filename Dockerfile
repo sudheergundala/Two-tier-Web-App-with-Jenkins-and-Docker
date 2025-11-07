@@ -50,7 +50,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ## CMD["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
 ## gunicorn -- production grade WSGI Http Server for python webapps
-## --bind --- this will tells the gunicorn server to listen to all the network interfaces on port 5000.
+## --bind --- this will tells the gunicorn server to listen to all the network interfaces on port 5000. this is same like expose.
 ## app:app --- Module_name:Variable_name. ---module_name is name of the application ex: app.py. 
 ##             variable_name --- this the name we gave in the program for flask ie app = Flask(__name__)
 
