@@ -1,0 +1,31 @@
+services:
+  flask:
+    build: .
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: flask_user
+      MYSQL_PASSWORD: flask_password
+      MYSQL_DB: flask_db
+    ports:
+      - "5000:5000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: flask_db
+      MYSQL_USER: flask_user
+      MYSQL_PASSWORD: flask_password
+    volumes:
+      - data_vol:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+      timeout: 5s 
+volumes:
+  data_vol:
