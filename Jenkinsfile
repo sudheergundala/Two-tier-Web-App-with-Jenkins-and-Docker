@@ -46,22 +46,21 @@ pipeline {
         stage('Get Image SHA') {
            steps {
               script {
-            // Get SHA of the built image
+               // Get SHA of the built image
                 IMAGE_SHA = sh(script: "docker inspect --format='{{index .RepoDigests 0}}' gundalasudheer/flask-app:latest", returnStdout: true).trim()
+               }
+            }
         }
-    }
-}
-
-stage('Deploy Using Docker Compose') {
-    steps {
-        script {
-            // Export the SHA for Compose
-            sh """
-                export FLASK_IMAGE_SHA=$IMAGE_SHA
-                docker-compose up -d
-            """
+        stage('Deploy Using Docker Compose') {
+           steps {
+               script {
+                 // Export the SHA for Compose
+                 sh """
+                   export FLASK_IMAGE_SHA=$IMAGE_SHA
+                   docker-compose up -d
+                   """
+                }
+            }
         }
-    }
-}
     }
 }
