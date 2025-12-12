@@ -1,6 +1,6 @@
 services:
   flask:
-    build: .
+    image: gundalasudheer/flask-app:${FLASK_IMAGE_SHA}
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: flask_user
